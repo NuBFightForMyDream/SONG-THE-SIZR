@@ -156,7 +156,7 @@ if st.session_state.get('api_key_valid', False):
             Create a conflict or a story based on the lyrics (dataframe) . You can invent characters (e.g., Boy, Girl, Stranger).
     
             **OUTPUT REQUIREMENT:**
-            Return novel of 2 paragraph.
+            Return novel of 2 paragraph. Need in thai story.
         
             Lyrics to adapt:
             {songs_dataframe}
@@ -172,8 +172,3 @@ if st.session_state.get('api_key_valid', False):
     st.divider() 
     st.write("This is a part of my Final Project on 2209261 Basic Programming NLP , Semester 1 AY2025")
     st.write("Done by 6730084521 Chatrphol Ovanonchai. Use for educational purposes only!")
-    
-    
-        
-    
-    
