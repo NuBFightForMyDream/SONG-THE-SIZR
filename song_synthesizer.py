@@ -31,7 +31,7 @@ with st.sidebar:
                     genai.configure(api_key=api_key)
                     
                     # ทดสอบเรียกใช้ model
-                    model = genai.GenerativeModel('gemini-2.5-flash-lite')
+                    model = genai.GenerativeModel('gemini-2.5-flash')
                     response = model.generate_content("Say 'API key is valid'")
                     
                     # ถ้าสำเร็จ
@@ -49,7 +49,7 @@ if st.session_state.get('api_key_valid', False):
     
     # Set initial state of Generative AI
     genai.configure(api_key=st.session_state['api_key'])
-    model = genai.GenerativeModel('gemini-2.5-flash-lite')       
+    model = genai.GenerativeModel('gemini-2.5-flash')       
             
     ## After This , most will be written by myself , AI is used for checking errors
     
@@ -112,20 +112,20 @@ if st.session_state.get('api_key_valid', False):
             Act as a professional screenwriter. Adapt the following song lyrics into a dramatic dialogue scene.
             Create a conflict or a story based on the lyrics (dataframe) . You can invent characters (e.g., Boy, Girl, Stranger).
     
-        **OUTPUT REQUIREMENT:**
-        Return ONLY a valid JSON string. The structure must be a list of dictionaries.
-        Each dictionary must have these keys:
-        - "Scene Number 🎬 ": Order number (1, 2, 3...)
-        - "Character 👩🏻‍🦰 ": Name of the character
-        - "Dialogue 📢 ": What they say (Thai language preferred for dialogue)
-        - "Emotion 🥺 ": Emotional state (e.g., Sad, Angry, Crying)
-        - "Action 🎭 ": Physical action (e.g., Wiping tears, Looking away)
-        
-        Do not use markdown code blocks (```json). Just raw JSON.
-        
-        Lyrics to adapt:
-        {songs_dataframe}
-        """
+            **OUTPUT REQUIREMENT:**
+            Return ONLY a valid JSON string. The structure must be a list of dictionaries.
+            Each dictionary must have these keys:
+            - "Scene Number 🎬 ": Order number (1, 2, 3...)
+            - "Character 👩🏻‍🦰 ": Name of the character
+            - "Dialogue 📢 ": What they say (Thai language preferred for dialogue)
+            - "Emotion 🥺 ": Emotional state (e.g., Sad, Angry, Crying)
+            - "Action 🎭 ": Physical action (e.g., Wiping tears, Looking away)
+            
+            Do not use markdown code blocks (```json). Just raw JSON.
+            
+            Lyrics to adapt:
+            {songs_dataframe}
+            """
         try:
             # Step II : Get Response from AI
             response = model.generate_content(prompt)
@@ -166,9 +166,9 @@ if st.session_state.get('api_key_valid', False):
         text_response = response.text
         st.write(text_response)
         
-    ## Ending Zone 
-    st.write("You can adapt ideas from this program. Hope you guys enjoy!")
+## Ending Zone 
+st.write("You can adapt ideas from this program. Hope you guys enjoy!")
     
-    st.divider() 
-    st.write("This is a part of my Final Project on 2209261 Basic Programming NLP , Semester 1 AY2025")
-    st.write("Done by 6730084521 Chatrphol Ovanonchai. Use for educational purposes only!")
+st.divider() 
+st.write("This is a part of my Final Project on 2209261 Basic Programming NLP , Semester 1 AY2025")
+st.write("Done by 6730084521 Chatrphol Ovanonchai. Use for educational purposes only!")

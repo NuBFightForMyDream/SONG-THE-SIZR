@@ -1,19 +1,15 @@
-# 🎈 Blank app template
+# 🎵 SONG-THE-SIZR : Song Synthesizer for Dialogue Analysis 📑 and Drama Story 🎭
 
-A simple Streamlit app template for you to modify!
+## Behind Story of this project
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+It originates from my passion in Drama Arts and Technologies. So , I come up with an idea to create some innovations to make user feel more convenient and save more time instead of thinking and doing all process by themselves. The name of this project comes from "Synthesizer" . Meaning for how our program can synthesize raw materials into something special.
 
-### How to run it on your own machine
+## Contributor
 
-1. Install the requirements
+6730084521 Chatrphol Ovanonchai (Main Contributor)
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## Logic/Flow of this program
 
-2. Run the app
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## Bugs for future Improvement
+
