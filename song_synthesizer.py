@@ -123,6 +123,8 @@ if st.session_state.get('api_key_valid', False):
             
             Do not use markdown code blocks (```json). Just raw JSON.
             
+            Note : Songs shouldn't copy words from lyrics. Need more creativity for each dialogue 
+            
             Lyrics to adapt:
             {songs_dataframe}
             """
@@ -156,7 +158,7 @@ if st.session_state.get('api_key_valid', False):
             Create a conflict or a story based on the lyrics (dataframe) . You can invent characters (e.g., Boy, Girl, Stranger).
     
             **OUTPUT REQUIREMENT:**
-            Return novel of 2 paragraph. Need in thai story.
+            Return novel of 2 paragraph. Need in thai story and not copying words from lyrics. Need more creativity for my novels.
         
             Lyrics to adapt:
             {songs_dataframe}
